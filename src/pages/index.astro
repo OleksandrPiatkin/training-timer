@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Choose your Timer">
+		<h1>Choose your <span class="text-gradient">Timer</span></h1>
+		<p class="instructions">
+			To get started, pick one of the next <strong>options:</strong>
+			
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/clock"
+				title="Clock"
+				body="Simple clock to keep track of time."
+			/>
+			<Card
+				href="/emom"
+				title="EMOM"
+				body="EMOM stands for every minute on the minute."
+			/>
+			<Card
+				href="/amrap"
+				title="AMRAP"
+				body="AMRAP stands for as many rounds as possible."
+			/>
+			<Card
+				href="/tabata"
+				title="Tabata"
+				body="Tabata is a high-intensity interval training (HIIT) workout."
+			/>
+			<Card
+				href="/for-time"
+				title="For Time"
+				body="Use to complete a certain amount of reps in a certain amount of time."
+			/>
+		</ul>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>
