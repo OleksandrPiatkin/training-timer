@@ -1,0 +1,29 @@
+---
+import Card from './Card.astro';
+---
+
+<header class="head-wrap">
+	<Card
+		href="/"
+		title="Return"
+		isArrowleft={true}
+	/>
+</header>
+<section class='content-wrap'>
+	<slot />
+</section>
+
+<style>
+.content-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(80vh - 200px);
+	font-size: 5rem;
+	font-weight: 700;
+}
+.head-wrap {
+	width: 150px;
+	margin-bottom: 50px;
+}
+</style>

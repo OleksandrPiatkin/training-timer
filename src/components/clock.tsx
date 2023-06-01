@@ -1,9 +1,9 @@
-import React from "react";
+import { useEffect, useState } from 'react';
 
 const Clock = () => {
-  const [time, setTime] = React.useState(new Date().toLocaleTimeString());
+  const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-  React.useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
     }, 1000);
@@ -11,7 +11,7 @@ const Clock = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <div>{time}</div>;
+  return <span>{time}</span>;
 };
 
 export default Clock;

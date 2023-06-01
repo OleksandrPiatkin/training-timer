@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Clock from '../components/clock';
+import ForTimeTimer from '../components/forTimeTimer';
 import SubPage from '../components/shared/SubPage.astro'
 ---
 
 <Layout title='Clock'>
-	<SubPage>
-    <Clock client:load/>
+  <SubPage>
+    <ForTimeTimer client:load />
   </SubPage>
 </Layout>
+
+<style>
+
+</style>
